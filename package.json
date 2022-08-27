@@ -1,0 +1,40 @@
+{
+  "name": "sproto",
+  "displayName": "sproto",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "sproto",
+        "path": "./snippets.json"
+      }
+    ],
+    "languages": [
+      {
+        "id": "sproto",
+        "aliases": [
+          "Sproto",
+          "sproto"
+        ],
+        "extensions": [
+          "sproto"
+        ],
+        "configuration": "./sproto.configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "sproto",
+        "scopeName": "source.sproto",
+        "path": "./syntaxes.json"
+      }
+    ]
+  }
+}
