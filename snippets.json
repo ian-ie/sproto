@@ -23,7 +23,7 @@
          "   response {",
          "       r 0 : integer",
          "       items 1 : *item(id)",
-         "       ${3:resp}",
+         "       ${4:resp}",
          "   }",
          "}"
       ],
