@@ -1,45 +1,44 @@
 {
-    "sync struct":{
-        "prefix": "sync",
-        "body": [
-            "sync_${1:消息名} ${2:序号} {",
-            "   request {",
-            "       ${3:具体结构}",
-            "   }",
-            "}"
-        ],
-        "description": "sync消息的结构"
-    },
-    "req struct":{
-        "prefix": "st",
-        "body": [
-            "${1:消息名} ${2:序号} {",
-            "   request {",
-            "       ${3:req}",
-            "   }",
-            "   respone {",
-            "       r 0 : integer",
-            "       ${4:resp}",
-            "   }",
-            "}"
-        ],
-        "description": "通常req"
-    },
-    "resp item struct":{
-        "prefix": "sti",
-        "body": [
-            "${1:消息名} ${2:序号} {",
-            "   request {",
-            "       ${3:req}",
-            "   }",
-            "   respone {",
-            "       r 0 : integer",
-            "       items 1 : *item(id)",
-            "       errorData 2 : errorData",
-            "       ${4:resp}",
-            "   }",
-            "}"
-        ],
-        "description": "返回items的req"
-    }
+   "req struct" : {
+      "body" : [
+         "${1:req} ${2:num} {",
+         "   request {",
+         "       ${3:req}",
+         "   }",
+         "   respone {",
+         "       r 0 : integer",
+         "       ${4:resp}",
+         "   }",
+         "}"
+      ],
+      "description" : "通常req",
+      "prefix" : "st"
+   },
+   "resp item struct" : {
+      "body" : [
+         "${1:req} ${2:num} {",
+         "   request {",
+         "       ${3:req}",
+         "   }",
+         "   respone {",
+         "       r 0 : integer",
+         "       items 1 : *item(id)",
+         "       ${3:resp}",
+         "   }",
+         "}"
+      ],
+      "description" : "返回items的req",
+      "prefix" : "sti"
+   },
+   "sync struct" : {
+      "body" : [
+         "sync_${1:req} ${2:num} {",
+         "   request {",
+         "       ${3:struct}",
+         "   }",
+         "}"
+      ],
+      "description" : "sync消息的结构",
+      "prefix" : "sync"
+   }
 }
